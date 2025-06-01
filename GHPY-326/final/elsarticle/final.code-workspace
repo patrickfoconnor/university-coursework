@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "final",
+			"path": ".."
+		},
+		{
+			"name": "image_page",
+			"path": "../image_page"
+		}
+	],
+	"settings": {}
+}

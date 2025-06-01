@@ -1,12 +1,12 @@
-# MSU-Fall2020
+# MSU-Spring2021
 
-Fall 2020 Course Work at Montana State University
+Spring 2021 Course Work at Montana State University
 
 The following Repo holds course work for the following classes. Not all course work is present within this repo as some was not deemed fit for github repository
 
 
-- CSCI  Data Structures and Algorithms	(Grade:A)	(Course No. 232)
-- GPHY  Human Geography	(Grade:A-)	(Course No. 121D)
-- GRMN  Elementary German II	(Grade:B+)	(Course No. 102D)
-- M     Calculus for Technology I	(Grade:B)	(Course No. 165Q)
-- STAT  Introduction to Statistics	(Grade:B-)	(Course No. 216Q)
+- CSCI  Discrete Structures	(Grade:B)	(Course No. 246)
+- CSCI  Computer Security	(Grade:A)	(Course No. 476)
+- ESOF  Software Engineering	(Grade:A-)	(Course No. 322)
+- GPHY  Geography of Energy Resources	(Grade:A-)	(Course No. 326)
+- M     Calculus for Technology II	(Grade:B)	(Course No. 166Q)

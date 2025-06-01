@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{../fasy-hw}
+
+\author{Prof.~Fasy}
+\collab{n/a}
+
+\begin{document}
+
+\paragraph{Citation Option 1}
+
+The first way to provide your citations is just to list them at the end of the
+homework assignment.  For example:
+
+My sources are:
+\begin{enumerate}
+    \item Brooks, Fred P. The Mythical Man-Month. Addison-Wesley, 1975.
+    \item Wikiepedia article: \url{https://en.wikipedia.org/wiki/Fred_Brooks}
+    \item \todo{add a new `item' for each new source}
+\end{enumerate}
+
+\newpage
+\paragraph{Citation Option 2}
+
+One way to add citations is to put the citation information in a
+footnote.\footnote{
+Brooks, Fred P. The Mythical Man-Month. Addison-Wesley, 1975.
+    }
+Whenever you have something that needs a citation, you can add another footnote
+like this.\footnote{\todo{Another citation goes here.}}
+
+\newpage
+\paragraph{Citation Option 3}
+
+By default, we have it setup so that LaTex will look for bibentries in
+biblio.bib.   For example, I have a signed copy of
+\emph{The Mythical Man-Month}~\cite{brooks1975mythical} in
+German! (Now, look at the next page of the compiled PDF).
+To find a starting point for bib entries, I recommend searching for the resource
+on Google scholar (\url{https://scholar.google.com}).  When you find the
+article, click the quote symbol under it, then the hyperlink for BibTex (and,
+ask if you encounter any issues). Of course,
+the \href{https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management}{LaTex
+Wikibook} is often
+helpful.
+
+%% ... the bibliography
+\newpage
+\bibliographystyle{acm}
+\bibliography{biblio}
+
+\end{document}

@@ -1,0 +1,167 @@
+# Working with a Git Remote
+
+This markdown file contains a brief tutorial for how to use the basic git
+features that will make this semester easier for you.  This is based on the [CSCI 441
+Lab
+tutorial](https://bitbucket.org/msu-cs/csci-441-spring2020/src/master/labs/README.md).
+
+## 1. Sign up for Github
+
+First, you'll need a GitHub account, so [sign up
+here](https://github.com/join).
+
+## 2. Install Git
+
+Now, we need to make sure git is installed on your computer. There are a number of git GUI
+clients, including
+[SourceTree](https://www.atlassian.com/software/sourcetree/overview), or
+[others](http://git-scm.com/downloads/guis).  I'll leave you to figure out your
+GUI of choice on your own if you like.  I always stick to the command line when
+I can, so that's what I'll be showing you how to do. In a terminal run the
+following:
+
+    git --version
+
+If you get an error you may need to [download and install
+git](http://git-scm.com/downloads).  If you've never used git before you might
+want to [read up on the docs](http://git-scm.com/doc), or go through the basics
+with [Try Git](try.github.com).
+
+## 3. Setup SSH Keys
+
+If you really like typing, you can connect to GitHub using HTTPs access.
+However, I suggest using SSH.  [See instructions here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
+)
+
+## 4. Clone the course repository
+
+To clone the repository, type the following in your command line:
+
+    git clone git@github.com:msu/csci-246-spring2021.git 
+
+
+## 5. Duplicate the Repository
+
+Forks in git are public by default.  You can use a fork if you'd like, but I
+will suggest duplicating the repository to a private git repository.  See the
+following link for details:
+[Directions
+Here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/duplicating-a-repository)
+
+## 6. Clone your repository
+
+To download your repository so it's ready for modifications, we need to clone
+it.  Run the following command with repo url replaced with the url to your
+private repository (you can find this by clicking the Code button in GitHub).
+
+    git clone <repo url>
+
+## 7. How to pull the latest assignments
+
+I'll be adding assignments here throughout the semester so you'll need to add
+this repository as a remote that you can pull changes from. Make sure you cd
+into your repository, something like (depending on what you named it):
+
+    cd csci-246-spring2021
+
+Then let's list what remotes we currently have:
+
+    git remote -v
+
+You should see two entries for your Bitbucket repository, one (fetch) and one
+(push). When you use `git push` or `git pull`, by default you'll push or pull
+to/from that url. We want to add another entry that we can explicitly pull from
+to merge in assignments as I add them. To do that, run the following:
+
+    git remote add csci246 https://github.com/msu/csci-246-spring2021
+
+Now if you run the `git remote -v` command you'll see two additional entries.
+You won't have permission to push to this one, but you will be able to pull new
+assignments by running the following:
+
+    git pull csci246 master
+
+For more information and troubleshooting, [see
+here](https://docs.github.com/en/free-pro-team@latest/github/using-git/adding-a-remote).
+
+## 8. How To Save Your Work
+
+Once you start making changes to your code, you'll want to commit those changes
+and push them back up to Bitbucket. You should do this often to keep a good
+history of what changes you made and why. It also ensures your files are safely
+stored on the server.
+
+For every file you've changed or created, you'll want to run `git add <file
+name>`. The command stages the file for commit. You can think of staging a file
+as flagging that you want to save it in your next commit. Once you've staged
+every file that you want to commit type:
+
+    git commit -m "A short description of what you're committing"
+
+It can be handy to see what files have been changed. To see what changes have
+been made you can use `git status`. `git status` will show you which files
+you've modified, which files are new and which files have been staged for
+commit.
+
+When working in a group, writing good commit messages are very important.  Your
+collaborators (including your future self) will be very thankful for well crafted
+messages.  For more on how to write good commit messages, see blogs from
+[erlang project](https://github.com/erlang/otp/wiki/writing-good-commit-messages),
+[Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html),
+or, [Chris Beams](https://chris.beams.io/posts/git-commit/).
+
+Sometimes, git can be a little finicky if you have trailing white space in the
+file. Often, your text editor or IDE has an option (or plugin) to automatically
+trim trailing white space. It is a good idea to enable automatic trimming of
+trailing white space as it can save your some headaches in the future.
+
+Be careful to not commit files that are generated by the build process
+(i.e. .bbl, .pdf, and .aux files).  I've included a
+.gitignore file in the repository that will ignore most files that will be
+generated by your LaTexbuild processes, but others may be generated as well that I'm
+not aware of (especially if you're running your code on Windows or MacOS).
+
+You can commit as many times as you want locally. When you're ready to submit
+all your commits up to the server (so they are safe if you throw your computer
+out the windoe), run:
+
+    git push origin master
+
+If you've cloned your repository in more than one location (such as on a lab
+computer and on your own laptop) and have made changes to one of them and pushed
+those changes up to the server, you can use `git pull` from the other location
+to bring it up to date.
+
+## 9. More Git Basics
+
+Git is a distributed version control system (VCS). When you cloned the
+repository above, you downloaded every change that has ever been made to the
+repository. You can see each individual change by running the following:
+
+    git log
+
+You'll see a list of commits, which are changes to a set of files in your
+repository. Each commit looks something like this (this is the first commit to
+your repository, made by me):
+
+    commit fd550eaab023eef5deb3f00aa2265d3dbbd5c5ed
+    Author: David Millman <david.millman@montana.edu>
+    Date:   Thu Jan 4 20:05:31 2018 -0700
+
+        Add initial version of syllabus
+
+The first line shows the hash value for the commit. If you ever want to revert
+back to a specific commit you can use `git checkout <hash value>`. In your
+repository, you can type the following to get to the very first change ever
+made:
+
+    git checkout fd550eaab023eef5deb3f00aa2265d3dbbd5c5ed
+
+To get back to the lastest, you can run:
+
+    git checkout master
+
+For more, check out a
+[fully featured git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
+The [official git documentation](http://git-scm.com/doc). And a great
+course on [Udacity](https://www.udacity.com/course/how-to-use-git-and-github--ud775).

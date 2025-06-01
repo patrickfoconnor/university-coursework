@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< cs.msu.edu:ESOF_322_Project >---------------------
+[INFO] Building ESOF_322_Project 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ESOF_322_Project ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ ESOF_322_Project ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ESOF_322_Project ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ ESOF_322_Project ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 42 source files to /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/target/test-classes
+[INFO] /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/src/test/java/edu/montana/esof322/demo/controlflow/ControlFlowDemo.java: /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/src/test/java/edu/montana/esof322/demo/controlflow/ControlFlowDemo.java uses unchecked or unsafe operations.
+[INFO] /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/patrick_oconnor/src/test/java/edu/montana/esof322/demo/controlflow/ControlFlowDemo.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ ESOF_322_Project ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.367 s
+[INFO] Finished at: 2021-03-30T12:00:45-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project ESOF_322_Project: No tests were executed!  (Set -DfailIfNoTests=false to ignore this error.) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

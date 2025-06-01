@@ -1,0 +1,302 @@
+\documentclass{article}
+\usepackage{../fasy-hw}
+
+%% UPDATE these variables:
+\renewcommand{\hwnum}{7}
+\title{Discrete Structures, Homework \hwnum}
+\author{Patrick O'Connor (Patrick OConnor (322))}
+\collab{n/a}
+\date{due: 16 April 2021}
+
+\begin{document}
+
+\maketitle
+
+This homework assignment should be
+submitted as a single PDF file both to D2L and to Gradescope.
+
+General homework expectations:
+\begin{itemize}
+    \item Homework should be typeset using LaTex.
+    \item Answers should be in complete sentences and proofread.
+    \item You will not plagiarize, nor will you share your written solutions
+        with classmates.
+    \item List collaborators at the start of each question using the \texttt{collab} command.
+    \item Put your answers where the \texttt{todo} command currently is (and
+        remove the \texttt{todo}, but not the word \texttt{Answer}).
+\end{itemize}
+
+
+% ============================================
+% ============================================
+\collab{n/a} \nextprob{Graphs}
+% ============================================
+% ============================================
+
+Often, in order to transform real-world problems into ones that can be analyzed
+on computers, you need to design a representation of the data that helps
+illuminate the patterns.  One common representation is a graph.  Suppose you own
+a movie store.  You have records of every movie purchased, how much it was
+purchased for, and who purchased it.  Describe two different graphs that you can
+create to represent this data.  Please make sure that the nodes in the two
+graphs represent different things.
+
+\paragraph{Answer}
+
+
+A possible graph that could be used to display the records of every movie purchased, how much it was purchased for, and who purchased it could be a Directed acyclic digraph. 
+Using this graph we could start with a root of all movies sold. The child of this could be a genre such as action. This action node could be a parent to an assortment of titles.
+These titles would then be the parent to all of the prices that the movie has been sold at. From these prices we can have child nodes of all of the customers that have purchased the movie at that price.
+
+A second graph that could be used if this business is smaller is a multi-tree. As there is most likely not a large variety of prices I would start there.
+From the prices, movies that have been sold can be added as nodes there. After the movies are listed I can then list the buyers of that specific film at that price as child nodes of the title.
+
+% ============================================
+% ============================================
+\collab{n/a} \nextprob{Equivalence Class}
+% ============================================
+% ============================================
+
+Define a relation $R$ between all simple graphs where two graphs $g$ and $h$ are
+related (denoted $gRh$) if and only if $g$ and $h$ have the same number of
+connected components.
+
+\begin{enumerate}
+
+    \item Prove that this is an equivalence relation.
+
+        \paragraph{Answer}
+
+        Let $R$ be relation from set $G$ to set $H$ defined as $(g,h) \in R$. Then in a direct it can represent an edge between $(g,h)$.
+        
+        A relation $R$ is reflexive if there is a loop at every node of directed graph. This graph is irreflexive if there are no loops.
+        A relation $R$ on a set $G$ is said to be an equivalence relation if the relation $R$ is reflexive, transitive, and symmetric.
+        
+        Assume that $R$ is a relation on the set of ordered positive integer pairs such that $((g,h) (a,b)) \in R$ if and only if $gb=ha$.
+
+        In order to prove we must fulfill the previous statement that $R$ is reflexive, transitive, and symmetric.
+
+        Reflexive Property:
+        \begin{enumerate}
+            \item If $(g,g) \in R$ for every $g \in R$ 
+            \item For all pairs of positive integers $((g,h)(g,h)) \in R$
+        \end{enumerate}
+        With this we can state that for all positive integers $gh = gh$ and therefor $R$ is reflexive.
+
+        Transitive Property:
+        \begin{enumerate}
+            \item If $(g,h) \in R$ of $(h,a) \in R$ then $(g,a) \in R$
+            \item For the given set of ordered positive integer pairs $((g,h) (a,b)) \in R$ and $((a,b) (c,d)) \in R$ then $((g,h) (c,d)) \in R$
+        \end{enumerate}
+
+        Assuming $((g,h) (a,d)) \in R$ and $((g,h) (c,d)) \in R$. We can state $gb=ab and ad=bc$
+        This relation can be explained as $g/h=a/b$ and $a/b=c/d$, so $gd=hc$.
+        
+        Therefore $((g,h) (c,d)) \in R$ and $R$ is transitive.
+
+        Lastly we must prove that $R$ is symmetric. We can do this using the properties of symmetry in that 
+        if $(g,h) \in R$ then we can say $(h,g) \in R$.
+        
+        if $((g,h)(a,b)) \in R$ then $((a,b)(g,h)) \in R$
+        if $((g,h)(a,b)) \in R$ then $gb=ha$ and $ah=bg$ with the commutative property of multiplication.
+        
+        Therefore $R$ is symmetric as $((a,b)(g,h)) \in R$
+
+
+    \item Describe a scenario where you might use this equivalence relation.
+
+        \paragraph{Answer}
+
+        Assume that $F$ is a relation on a set of real numbers $R$ defined by $xFy$ if $x-y$ is an integer. Prove that $F$ is an equivalence relation on $R$.
+        Reflexive Property:
+        Consider $x \in R$ then $x-x=0$ which is an integer and therefore $xFx$.
+
+        Transitive Property:
+        Consider $x$ and $y \in R$ and $xFy$. Then $x-y$ is an integer. Thus $y-x=-(x-y)$. Then $y-x$ is also an integer. Therefore $yFx$ is transitive.
+
+        Lastly we must prove this is symmetric. Consider $x$ and $y \in R$ , $xFy$, and $yFz$. With this we can state $x-y$ and $y-z$ are integers. 
+        According to the transitive property: $(x-y) + (y-z) = x-z)$ would also be an integer. So that $xFz$. 
+        
+        This is a mathematical example of where this equivalence relation could be helpful. 
+        
+
+\end{enumerate}
+
+% ============================================
+% ============================================
+\collab{n/a} \nextprob{Pseudocode}
+% ============================================
+% ============================================
+
+Recall the binary search algorithm.
+
+\begin{enumerate}
+    \item Using the algorithm/algorithmic environment,
+        give pseudocode using a for loop.
+
+        \paragraph{Answer} My algorithm for binary search using a for loop is given in \algref{forloop}.
+
+        \begin{algorithm}
+            \caption{\textsc{BinarySearchFor}$(A)$}\label{alg:forloop}
+            \begin{algorithmic}
+                \State Declare function with A(node, element)
+                \For {the node greater than zero}
+                \If {the node.value is equal to element}
+                    \State \textbf{break}
+                \EndIf
+                \If {node.value is less than element}
+                    \State node equals node.right
+                    \State \textbf{return} node
+                \EndIf
+                \If {node is null}
+                    \State \textbf{return} Tree is empty. Examine input
+                \EndIf
+                \EndFor
+                \State 
+            \end{algorithmic}
+        \end{algorithm}
+
+    \item Using the algorithm/algorithmic environment, give pseudocode using a while loop\algref{whileloop}.
+
+        \paragraph{Answer}
+
+        \begin{algorithm}
+            \caption{\textsc{BinarySearchFor}$(A)$}\label{alg:whileloop}
+            \begin{algorithmic}
+                \State{\textbf{precondition:} A[1..n] is sorted in non-decreasing order}
+                \State{\textbf{postcondition:} If key is in A[1..n], algorithm returns its location }
+                \State Declare function with BinarySearch(A[1..n], key)
+                \State start = 1
+                \State end = n
+                \While {start < end}
+                \Comment{\textbf{loop-invariant:} If key is in A[1..n], then key is in A[start, end]}
+                \State mid=(start+end)/2
+                \If {the key is less than or equal to A[mid]}
+                    \State \textbf{return} end = mid
+                \EndIf
+                \If {the key is greater than A[mid]}
+                    \State {start = mid+1}
+                    \State \textbf{return} start
+                \EndIf
+                \EndWhile
+
+                \If {key =A[start]}
+                    \State \textbf{return} start
+                \EndIf
+                \If key != A[start]
+                    \State {\textbf{return} key is not in list}
+                \EndIf
+            \end{algorithmic}
+        \end{algorithm}
+
+
+    \item Using the algorithm/algorithmic environment, give pseudocode using
+        recursion\algref{recursion}.
+
+        \paragraph{Answer}
+
+        \begin{algorithm}
+            \caption{\textsc{BinarySearchFor}$(A)$}\label{alg:recursion}
+            \begin{algorithmic}
+                \State Declare function with A(node, key)    
+                \If {the root is equal to none or root.value is key}
+                    \State \textbf{return} Tree is empty. Examine input 
+                \EndIf
+                \If{root.value is less than key}
+                    \State \textbf{return} binarySearch(root.right, key)
+                \EndIf
+                \If{root.value is greater than key}
+                    \State \textbf{return} binarySearch(root.left, key) 
+                \EndIf
+            \end{algorithmic}
+        \end{algorithm}
+
+
+    \item What is the loop invariant of your second algorithm? (Proofs are not
+        necessary, just stating the LI is required here.  As usual, for partial
+        credit of an incorrect answer, reasoning will need to be justified).
+
+        \paragraph{Answer}
+
+        The answer to this question has been placed in the notes of the pseudocode. \algref{whileloop}
+\end{enumerate}
+
+% ============================================
+% ============================================
+\collab{n/a} \nextprob{Four Colors Suffice}
+% ============================================
+% ============================================
+
+Read Chapter $11$ of \emph{Four Colors Suffice}.
+
+\begin{enumerate}
+
+    \item What is a proof?
+
+        \paragraph{Answer}
+
+        The original definition of a proof stated by mathematician Tymoczko is FCS is defined as a convincing and surveyable inferential argument for a statement that logically gurantees the conclusion. 
+        Although Tymoczko did not approve of the computer assisted proof, it has now been consider to be a reliable method of proving something mathematically.
+
+
+    \item Choose one concept that was described in both FCS and in Epp.
+        Compare and contrast their explanations of the concept.
+
+        \paragraph{Answer}
+
+        The concept of induction is described in both FCS and in Epp. In FCS, induction is explained as knocking down an unending line of dominoes. A
+        Along with this the Epp. textbook also used this analogy of an infinite collection of dominoes being knock down.
+
+        While both books used this analogy Epps went on to explain the origin of the use of induction by italian scientist Francesco Maurolico and then give simpler 
+        explanations and examples for utilizing induction proofs. FCS on the other hand decided that this had been traced back to the mathematician Levi ben Gerson. This 
+        was quite surprising as I did not catch this slight difference when reading through the books the first time. Along with this the focus of introducing
+         induction FCS was certainly different as FCS directly went into utilizing it to explain how it can be applied to the four-coloring thereom for maps. 
+
+        Overall, this was as expected as the FCS is focused on explain the four color thereom in detail while Epps is focused on teaching a less knowledgable crowd about
+        the basics of discrete mathematics. I am still curious to find out who the original creator of proof by induction is but the internet was just about as 
+        uncertain about this as well.
+
+\end{enumerate}
+
+% ============================================
+% ============================================
+\collab{n/a}
+\nextprob{Thomas Bayes}
+% ============================================
+% ============================================
+
+Write a short (1-2 paragraph) biography of Thomas Bayes.
+\textbf{In your own words}, describe who they are and why they are important in
+the history of computer science.
+
+If you use external resources, please provide
+proper citations. If you do not use external sources, please write ``I did not
+use any sources to write this biography'' as the last sentence of the
+biography.
+
+\paragraph{Answer}
+
+Thomas Bayes was an english statistician, philosopher, and presbyterian minister who is well know for creating the Bayes' theorem. 
+Before creating this thereom, Bayes studied logic and theology at the University of Edinburgh around 1719. After graduating in 1722, 
+he assisted his father in the presbyterian chapel in London before moving to be a minister at the Mount Sion Chapel until 1752. 
+Throughout his lifetime he did not have many publications and the majority of the discoveries that he made were found in his notes. 
+With little to no publications his timeline is not the clearest to follow but it is clear through his note taking that he found a deep 
+interest in probability in his later years.
+
+This interest in probability is where he made the largest contribution to computer science and statistics. As previously stated, the Bayes'(Bayesian) thereom
+was his golden egg and with this he altered almost every field of study. Specifically in computer science the Bayesian process is used in AI to strengthen their automated decision making.
+This process can be simply explained as formulating a hypothesis about the world, utilizing existing knowledge, applying data to this knowledge, and lastly devoloping new knowledge from the
+examination of the output from the previous two steps. Overall, Thomas Bayes was born to early to make a direct contribution to computer science but with his discoveries that many have built on 
+he has created one of the most widely used statistical examination methods.
+
+\emph{britannica}~\cite{britannica}
+\emph{Wikipedia}~\cite{wikipedia}
+
+
+% %% ... the bibliography
+ \newpage
+ \bibliographystyle{acm}
+ \bibliography{biblio}
+
+\end{document}
+
