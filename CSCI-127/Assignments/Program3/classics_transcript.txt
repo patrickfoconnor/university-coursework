@@ -1,0 +1,110 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+ RESTART: /Users/danieldefrance/Google Drive/CSCI/Courses/04_2020S/127/Assignments/program03/Daniel-DeFrance-Program3.py 
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 1
+
+The most popular download is Pride and Prejudice
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 2
+
+Enter least difficult out of 1000 (e.g. 250): 100
+Enter most difficult out of 1000 (e.g. 300): 110
+Using the Flesch–Kincaid grade level formula.
+
+100 - The Business.. As Usual - Grade Level: 4.8
+101 - The Duchess of Malfi - Grade Level: 4.8
+102 - The Game of Logic - Grade Level: 4.8
+103 - The Imaginary Invalid - Grade Level: 4.8
+104 - The Importance of Being Earnest: A Trivial Comedy for Serious People - Grade Level: 4.8
+105 - The Invisible Man: A Grotesque Romance - Grade Level: 4.8
+106 - The Jew of Malta - Grade Level: 4.8
+107 - The Man with Two Left Feet.. and Other Stories - Grade Level: 4.8
+108 - The Monkey`s Paw: The Lady of the Barge and Others.. Part 2. - Grade Level: 4.8
+109 - The Picture of Dorian Gray - Grade Level: 4.8
+110 - The Red Badge of Courage: An Episode of the American Civil War - Grade Level: 4.8
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 3
+
+Enter last name of author (e.g. Dickens): Wilde
+The Importance of Being Earnest: A Trivial Comedy for Serious People by Oscar Wilde
+The Picture of Dorian Gray by Oscar Wilde
+An Ideal Husband by Oscar Wilde
+The Happy Prince.. and Other Tales by Oscar Wilde
+De Profundis by Oscar Wilde
+A Woman of No Importance by Oscar Wilde
+The Canterville Ghost by Oscar Wilde
+Lady Windermere`s Fan by Oscar Wilde
+Salomé: A Tragedy in One Act by Oscar Wilde
+The Picture of Dorian Gray by Oscar Wilde
+The Soul of Man under Socialism by Oscar Wilde
+The Ballad of Reading Gaol by Oscar Wilde
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 3
+
+Enter last name of author (e.g. Dickens): wilde
+The Importance of Being Earnest: A Trivial Comedy for Serious People by Oscar Wilde
+The Picture of Dorian Gray by Oscar Wilde
+An Ideal Husband by Oscar Wilde
+The Happy Prince.. and Other Tales by Oscar Wilde
+De Profundis by Oscar Wilde
+A Woman of No Importance by Oscar Wilde
+The Canterville Ghost by Oscar Wilde
+Lady Windermere`s Fan by Oscar Wilde
+Salomé: A Tragedy in One Act by Oscar Wilde
+The Picture of Dorian Gray by Oscar Wilde
+The Soul of Man under Socialism by Oscar Wilde
+The Ballad of Reading Gaol by Oscar Wilde
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 4
+
+Enter search string (e.g. huckleberry): dorian
+**  The Picture of Dorian Gray
+  Author: Wilde Oscar 1854 - 1900
+  Download: https://www.gutenberg.org/ebooks/174
+**  The Picture of Dorian Gray
+  Author: Wilde Oscar 1854 - 1900
+  Download: https://www.gutenberg.org/ebooks/4078
+
+1. Identify the most popular book download.
+2. List a range of books by difficulty rating.
+3. Identify all books by certain author.
+4. Something interesting... Search!
+5. Quit.
+
+Enter your choice: 5
+
+Goodbye!
+>>> 
