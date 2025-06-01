@@ -1,12 +1,9 @@
-# MSU-Spring2021
+# MSU-Summer2021
 
-Spring 2021 Course Work at Montana State University
+Summer 2021 Course Work at Montana State University
+
+To view the coursework change the branch to the class ID (Ex: CSCI-338)
 
 The following Repo holds course work for the following classes. Not all course work is present within this repo as some was not deemed fit for github repository
 
-
-- CSCI  Discrete Structures	(Grade:B)	(Course No. 246)
-- CSCI  Computer Security	(Grade:A)	(Course No. 476)
-- ESOF  Software Engineering	(Grade:A-)	(Course No. 322)
-- GPHY  Geography of Energy Resources	(Grade:A-)	(Course No. 326)
-- M     Calculus for Technology II	(Grade:B)	(Course No. 166Q)
+- CSCI  Computer Science Theory	(Grade: B)	(Course No. 338)

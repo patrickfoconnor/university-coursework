@@ -1,2 +1,0 @@
-- Looks great! Nice work!
-- You did a really nice job identifying threats. A great next step is to enumerate the countermeasures/defenses that you know of to defend again (or at least mitigate) the potential damage from the threats you identified.
